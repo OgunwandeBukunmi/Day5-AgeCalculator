@@ -16,14 +16,14 @@ const App = () => {
     }
     const TOBDays = TOB.getDate();
     const NowDays = NOWDate.getDate();
-
+    console.log(TOBDays, NowDays);
     let fullDays;
     if (TOBDays > NowDays) {
       fullDays = NowDays;
     } else {
       fullDays = NowDays - TOBDays;
     }
-    if (!TOB) {
+    if (!date) {
       SetAge("Input your Date of Birth");
     } else {
       SetAge(
