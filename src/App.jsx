@@ -23,7 +23,7 @@ const App = () => {
     } else {
       fullDays = NowDays - TOBDays;
     }
-    if (!fullyears) {
+    if (!TOB) {
       SetAge("Input your Date of Birth");
     } else {
       SetAge(
