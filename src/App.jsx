@@ -25,13 +25,23 @@ const App = () => {
       fullmonth--;
     } else if (NowDays > TOBDays) {
       fullDays = NowDays - TOBDays;
+    } else if (NowDays == TOBDays) {
+      fullDays = 0;
     }
+
+    if (fullyears < 0 || fullmonth < 0) {
+      SetAge("Error");
+    }
+
     if (!date) {
       SetAge("Input your Date of Birth");
     } else {
       SetAge(
         ` YOU are ${fullyears} years,${fullmonth} months and ${fullDays}  Days Old`
       );
+    }
+    if (fullyears < 0 || fullmonth < 0) {
+      SetAge("Error");
     }
   }
 
