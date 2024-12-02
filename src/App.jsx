@@ -11,6 +11,8 @@ const App = () => {
     let fullmonth;
     if (TOBMonth > NowMonth) {
       fullmonth = NowMonth - TOBMonth + 12;
+    } else if (TOBMonth == NowMonth) {
+      fullmonth = 0;
     } else {
       fullmonth = NowMonth - TOBMonth;
     }
@@ -19,8 +21,9 @@ const App = () => {
     console.log(TOBDays, NowDays);
     let fullDays;
     if (TOBDays > NowDays) {
-      fullDays = NowDays;
-    } else {
+      fullDays = NowDays + (30 - TOBDays);
+      fullmonth--;
+    } else if (NowDays > TOBDays) {
       fullDays = NowDays - TOBDays;
     }
     if (!date) {
