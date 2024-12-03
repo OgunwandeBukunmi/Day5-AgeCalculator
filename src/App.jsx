@@ -13,8 +13,6 @@ const App = () => {
     if (TOBMonth > NowMonth) {
       fullmonth = 12 - TOBMonth + NowMonth;
       fullyears--;
-    } else if (NowMonth > TOBMonth) {
-      fullmonth = NowMonth - TOBMonth;
     } else {
       fullmonth = NowMonth - TOBMonth;
     }
